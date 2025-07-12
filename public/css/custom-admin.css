@@ -1,0 +1,691 @@
+/* ===== ESTILOS PERSONALIZADOS PARA EL SISTEMA DE GESTIÓN ESCOLAR ===== */
+
+/* Variables de colores institucionales */
+:root {
+    --primary-blue: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-blue: #3b82f6;
+    --accent-blue: #60a5fa;
+    --success-green: #059669;
+    --warning-orange: #d97706;
+    --danger-red: #dc2626;
+    --info-cyan: #0891b2;
+    --light-gray: #f8fafc;
+    --border-gray: #e5e7eb;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+}
+
+/* ===== HEADER Y NAVEGACIÓN ===== */
+
+/* Navbar principal */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%) !important;
+    border-bottom: none !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.main-header .navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.main-header .navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0.5rem !important;
+}
+
+/* Logo y brand */
+.brand-link {
+    background: var(--primary-dark) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    text-align: center !important;
+    padding: 1rem !important;
+}
+
+.brand-text {
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+/* ===== SIDEBAR ===== */
+
+/* Sidebar principal */
+.main-sidebar {
+    background: linear-gradient(180deg, #1e293b 0%, #334155 100%) !important;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Enlaces del sidebar */
+.nav-sidebar .nav-link {
+    color: #cbd5e1 !important;
+    border-radius: 0.5rem !important;
+    margin: 0.25rem 0.5rem !important;
+    padding: 0.75rem 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-sidebar .nav-link:hover {
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: white !important;
+    transform: translateX(4px) !important;
+}
+
+.nav-sidebar .nav-link.active {
+    background: var(--primary-blue) !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Iconos del sidebar */
+.nav-sidebar .nav-icon {
+    margin-right: 0.75rem !important;
+    width: 20px !important;
+    text-align: center !important;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+
+/* Wrapper principal */
+.content-wrapper {
+    background: #f8fafc !important;
+}
+
+/* Cards */
+.card {
+    border: none !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+}
+
+.card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-2px) !important;
+}
+
+.card-header {
+    background: white !important;
+    border-bottom: 1px solid var(--border-gray) !important;
+    border-radius: 1rem 1rem 0 0 !important;
+    padding: 1.5rem !important;
+}
+
+.card-title {
+    color: var(--text-dark) !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.card-body {
+    padding: 1.5rem !important;
+}
+
+/* ===== DASHBOARD ESPECÍFICO ===== */
+
+/* Header del dashboard */
+.dashboard-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.2);
+}
+
+.welcome-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.user-info {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.user-role {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    text-transform: capitalize;
+}
+
+/* Cards de estadísticas */
+.stat-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s;
+    border: none;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card-body {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.stat-card-content {
+    flex: 1;
+}
+
+.stat-card-number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.stat-card-label {
+    color: var(--text-muted);
+    margin: 0.25rem 0;
+    font-weight: 500;
+}
+
+.stat-card-trend {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.stat-card-trend.positive {
+    color: var(--success-green);
+}
+
+.stat-card-trend.negative {
+    color: var(--danger-red);
+}
+
+.stat-card-trend.neutral {
+    color: var(--text-muted);
+}
+
+/* ===== BOTONES MEJORADOS ===== */
+
+/* Estilos base para todos los botones */
+.btn {
+    border-radius: 0.5rem !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1.5rem !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    font-size: 0.9rem !important;
+    line-height: 1.2 !important;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover:before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn:active {
+    transform: translateY(0) !important;
+}
+
+/* Botones primarios */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3) !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1e40af 100%) !important;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* Botones de éxito */
+.btn-success {
+    background: linear-gradient(135deg, var(--success-green) 0%, #047857 100%) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3) !important;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+    box-shadow: 0 4px 16px rgba(5, 150, 105, 0.4) !important;
+}
+
+/* Suavizar el color naranja de los botones Editar */
+.btn-warning {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e42 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.15) !important;
+    border: none !important;
+}
+.btn-warning:hover {
+    background: linear-gradient(135deg, #f59e42 0%, #d97706 100%) !important;
+    color: #fff !important;
+}
+
+/* Botones de info */
+.btn-info {
+    background: linear-gradient(135deg, var(--info-cyan) 0%, #0e7490 100%) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(8, 145, 178, 0.3) !important;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, #0e7490 0%, #155e75 100%) !important;
+    box-shadow: 0 4px 16px rgba(8, 145, 178, 0.4) !important;
+}
+
+/* Botones de danger */
+.btn-danger {
+    background: linear-gradient(135deg, var(--danger-red) 0%, #b91c1c 100%) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3) !important;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%) !important;
+    box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* Botones secundarios */
+.btn-secondary {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3) !important;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #4b5563 0%, #374151 100%) !important;
+    box-shadow: 0 4px 16px rgba(107, 114, 128, 0.4) !important;
+}
+
+/* Consistencia para botones pequeños */
+.btn-sm {
+    padding: 0.45rem 1.1rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 0.375rem !important;
+    min-width: 80px !important;
+    text-align: center !important;
+}
+
+.btn-sm:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Botones grandes */
+.btn-lg {
+    padding: 1rem 2rem !important;
+    font-size: 1.1rem !important;
+    border-radius: 0.75rem !important;
+}
+
+.btn-lg:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Botones con iconos */
+.btn i {
+    font-size: 1em !important;
+    transition: transform 0.3s ease !important;
+}
+
+.btn:hover i {
+    transform: scale(1.1) !important;
+}
+
+/* Botones de acción en tablas */
+.btn-action {
+    margin: 0 0.25rem !important;
+    min-width: 80px !important;
+}
+
+/* Botones flotantes */
+.btn-float {
+    position: fixed !important;
+    bottom: 2rem !important;
+    right: 2rem !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    font-size: 1.5rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    z-index: 1000 !important;
+}
+
+.btn-float:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Botones de grupo */
+.btn-group .btn {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.btn-group .btn:first-child {
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+}
+
+.btn-group .btn:last-child {
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+}
+
+/* Botones deshabilitados */
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn:disabled:hover,
+.btn.disabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* ===== TABLAS ===== */
+
+/* Tablas */
+.table {
+    border-radius: 0.5rem !important;
+    overflow: hidden !important;
+}
+
+.table thead th {
+    background: var(--light-gray) !important;
+    border-bottom: 2px solid var(--border-gray) !important;
+    color: var(--text-dark) !important;
+    font-weight: 600 !important;
+    padding: 1rem !important;
+}
+
+.table tbody td {
+    padding: 1rem !important;
+    vertical-align: middle !important;
+    border-bottom: 1px solid var(--border-gray) !important;
+}
+
+.table tbody tr:hover {
+    background: var(--light-gray) !important;
+}
+
+/* ===== FORMULARIOS ===== */
+
+/* Inputs */
+.form-control {
+    border: 2px solid var(--border-gray) !important;
+    border-radius: 0.5rem !important;
+    /* padding: 0.75rem 1rem !important; */
+    transition: all 0.3s ease !important;
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue) !important;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Labels */
+.form-label {
+    color: var(--text-dark) !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Corregir los selects para que no se vean cortados */
+select.form-control, select {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    border-radius: 0.5rem !important;
+    /* padding: 0.75rem 1rem !important; */
+    font-size: 1rem !important;
+    background-color: #f8fafc !important;
+    border: 2px solid var(--border-gray) !important;
+    box-shadow: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+
+select.form-control:focus, select:focus {
+    border-color: var(--primary-blue) !important;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15) !important;
+    outline: none !important;
+}
+
+/* ===== ALERTAS Y MENSAJES ===== */
+
+/* Alertas */
+.alert {
+    border: none !important;
+    border-radius: 0.75rem !important;
+    padding: 1rem 1.5rem !important;
+    font-weight: 500 !important;
+}
+
+.alert-success {
+    background: #d1fae5 !important;
+    color: #065f46 !important;
+}
+
+.alert-danger {
+    background: #fee2e2 !important;
+    color: #991b1b !important;
+}
+
+.alert-warning {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+}
+
+.alert-info {
+    background: #cffafe !important;
+    color: #155e75 !important;
+}
+
+/* ===== BADGES ===== */
+
+/* Badges */
+.badge {
+    border-radius: 0.5rem !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 0.75rem !important;
+}
+
+.badge-primary {
+    background: var(--primary-blue) !important;
+}
+
+.badge-success {
+    background: var(--success-green) !important;
+}
+
+.badge-warning {
+    background: var(--warning-orange) !important;
+}
+
+.badge-danger {
+    background: var(--danger-red) !important;
+}
+
+.badge-info {
+    background: var(--info-cyan) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .user-info {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .stat-card-body {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .card-header {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .btn-sm {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.75rem !important;
+    }
+}
+
+/* ===== UTILIDADES ADICIONALES ===== */
+
+/* Sombras personalizadas */
+.shadow-custom {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow-custom-hover:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Bordes redondeados */
+.rounded-custom {
+    border-radius: 1rem !important;
+}
+
+/* Transiciones suaves */
+.transition-custom {
+    transition: all 0.3s ease !important;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== ESTILOS ESPECÍFICOS PARA COMPONENTES ===== */
+
+/* Dropdown menus */
+.dropdown-menu {
+    border: none !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+    padding: 0.5rem !important;
+}
+
+.dropdown-item {
+    border-radius: 0.5rem !important;
+    padding: 0.75rem 1rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.dropdown-item:hover {
+    background: var(--light-gray) !important;
+    transform: translateX(4px) !important;
+}
+
+/* Paginación */
+.pagination .page-link {
+    border: none !important;
+    color: var(--text-dark) !important;
+    padding: 0.75rem 1rem !important;
+    margin: 0 0.25rem !important;
+    border-radius: 0.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.pagination .page-link:hover {
+    background: var(--primary-blue) !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--primary-blue) !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+} 
