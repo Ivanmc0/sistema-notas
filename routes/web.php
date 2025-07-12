@@ -168,5 +168,35 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::post('notas', [NotaController::class, 'store'])->name('nota.store');
 });
 
+// Rutas para el módulo de reportes (solo admin)
+// Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
+//     Route::get('reportes', [\App\Http\Controllers\Admin\ReporteController::class, 'index'])->name('reportes.index');
+// });
+
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('reportes', [\App\Http\Controllers\Admin\ReporteController::class, 'index'])->name('reportes.index');
+    Route::post('reportes/preview-estudiante', [\App\Http\Controllers\Admin\ReporteController::class, 'previewEstudiante'])->name('reportes.preview.estudiante');
+});
+
+// Rutas AJAX para selects dependientes en reportes
+Route::middleware(['auth'])->prefix('api')->group(function () {
+    // Grados por año lectivo
+    Route::get('grados/{anio}', function ($anioId) {
+        return \App\Models\Grado::where('anio_lectivo_id', $anioId)->get();
+    });
+    // Cursos por año lectivo y grado
+    Route::get('cursos/{anio}/{grado?}', function ($anioId, $gradoId = null) {
+        $query = \App\Models\Curso::with('grado')->where('anio_lectivo_id', $anioId);
+        if ($gradoId) {
+            $query->where('grado_id', $gradoId);
+        }
+        return $query->get();
+    });
+    // Materias por curso
+    Route::get('materias/{curso}', function ($cursoId) {
+        return \App\Models\Materia::where('curso_id', $cursoId)->get();
+    });
+});
+
 
 

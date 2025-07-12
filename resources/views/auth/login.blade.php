@@ -246,8 +246,8 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
 
                 <div class="form-group">
                     <label for="email" class="form-label">Correo Electrónico</label>
@@ -270,7 +270,7 @@
                             {{ $message }}
                         </div>
                     @enderror
-                </div>
+            </div>
 
                 <div class="form-group">
                     <label for="password" class="form-label">Contraseña</label>
@@ -291,12 +291,12 @@
                             {{ $message }}
                         </div>
                     @enderror
-                </div>
+            </div>
 
                 <div class="checkbox-group">
                     <input id="remember_me" type="checkbox" name="remember" class="checkbox">
                     <label for="remember_me" class="checkbox-label">Recordarme</label>
-                </div>
+            </div>
 
                 <button type="submit" class="login-button">
                     Iniciar Sesión
@@ -306,11 +306,11 @@
                     <div class="forgot-password">
                         <a href="{{ route('password.request') }}">
                             ¿Olvidaste tu contraseña?
-                        </a>
+                    </a>
                     </div>
                 @endif
             </form>
         </div>
-    </div>
+            </div>
 </body>
 </html>

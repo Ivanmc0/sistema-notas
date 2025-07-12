@@ -92,4 +92,9 @@ class User extends Authenticatable
         return $this->hasMany(Matricula::class, 'estudiante_id');
     }
 
+    public function notas()
+    {
+        return $this->hasMany(\App\Models\Nota::class, 'estudiante_id');
+    }
+
 }

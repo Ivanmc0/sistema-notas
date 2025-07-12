@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Institución Educativa Liceo Comunitario Nueva Generación</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="https://api.dicebear.com/7.x/shapes/svg?seed=school" type="image/svg+xml">
-    <style>
+            <style>
         body {
             font-family: 'Montserrat', sans-serif;
             background: linear-gradient(135deg, #e0e7ff 0%, #60a5fa 100%);
@@ -109,8 +109,8 @@
             .container { padding: 1rem; }
             .features { flex-direction: column; gap: 1rem; }
         }
-    </style>
-</head>
+            </style>
+    </head>
 <body>
     <div class="container">
         <div class="hero">
@@ -136,16 +136,16 @@
                 <div class="feature-icon">📅</div>
                 <div class="feature-title">Períodos y Cursos</div>
                 <div class="feature-desc">Organiza los cursos, materias y períodos lectivos de manera eficiente.</div>
-            </div>
+                </div>
             <div class="feature-card">
                 <div class="feature-icon">📑</div>
                 <div class="feature-title">Reportes</div>
                 <div class="feature-desc">Genera reportes académicos y listados para el control institucional.</div>
-            </div>
+                </div>
         </div>
     </div>
     <footer>
         &copy; {{ date('Y') }} Institución Educativa Liceo Comunitario Nueva Generación. Desarrollado para gestión escolar.
     </footer>
-</body>
+    </body>
 </html>

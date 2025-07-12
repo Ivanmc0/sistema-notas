@@ -3,7 +3,7 @@
 @section('title', 'Dashboard - Sistema de Gestión Escolar')
 
 @section('content')
-<div class="container-fluid">
+  <div class="container-fluid">
     <!-- Header del Dashboard -->
     <div class="row mb-4">
         <div class="col-12">
@@ -246,7 +246,7 @@
             </div>
         </div>
     </div>
-</div>
+  </div>
 
 <style>
 /* Estilos adicionales específicos para el dashboard */

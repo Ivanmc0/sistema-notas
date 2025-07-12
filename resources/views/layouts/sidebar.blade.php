@@ -1,6 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="#" class="brand-link">
-      <span class="brand-text font-weight-light">Sistema Colegio</span>
+      <img src="https://api.dicebear.com/7.x/shapes/svg?seed=school" alt="Logo colegio" class="brand-image img-circle elevation-3" style="width:40px; height:40px; margin-right:10px; background:#fff;">
+      <span class="brand-text font-weight-light" style="white-space:normal;line-height:1.1;">Admin Notas</span>
     </a>
     <div class="sidebar">
       <nav class="mt-2">
@@ -65,6 +66,13 @@
             <a href="{{ route('nota.seleccionar') }}" class="nav-link">
                 <i class="nav-icon fas fa-clipboard-list"></i>
                 <p>Registro de Notas</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="{{ route('reportes.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-file-alt"></i>
+                <p>Reportes</p>
             </a>
         </li>
 
