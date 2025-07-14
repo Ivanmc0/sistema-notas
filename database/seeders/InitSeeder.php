@@ -22,11 +22,11 @@ class InitSeeder extends Seeder
         }
 
         // Crear usuario administrador
-        $admin = User::firstOrCreate(
-            ['email' => 'admin@colegio.test'],
+        $admin = User::updateOrCreate(
+            ['email' => 'admin@colegio.test'], // El campo para buscar
             [
-                'name' => 'Administrador',
-                'password' => Hash::make('password123'),
+                'name' => 'Administrador', // El campo para actualizar o crear
+                'password' => Hash::make('password123'), // El campo para actualizar o crear
             ]
         );
 
